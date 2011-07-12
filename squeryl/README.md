@@ -4,7 +4,7 @@
 
 ## run
 
-* sbt 0.10.0 is requried
+sbt 0.10.0 is requried
 
     $ sbt update run
 
