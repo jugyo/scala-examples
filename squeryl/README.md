@@ -1,5 +1,7 @@
 # squeryl example
 
+[http://squeryl.org/](http://squeryl.org/)
+
 ## run
 
 * sbt 0.10.0 is requried
