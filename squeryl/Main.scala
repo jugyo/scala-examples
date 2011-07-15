@@ -82,6 +82,11 @@ object Main {
       printAll
     }
 
+    // count
+    transaction {
+      println("count: %d" format from(books)(b => compute(count)).single.measures)
+    }
+
     // delete
   }
 }
