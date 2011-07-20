@@ -87,6 +87,18 @@ object Main {
       println("count: %d" format from(books)(b => compute(count)).single.measures)
     }
 
-    // delete
+    // delete by id
+    transaction {
+      val book = from(books)(b => select(b)).head
+      books.delete(book.id)
+      println(books.lookup(book.id)) // None
+    }
+
+    // delete by query
+    transaction {
+      val query = from(books)(b => select(b))
+      books.delete(query)
+      println("count: %d" format from(books)(b => compute(count)).single.measures)
+    }
   }
 }
