@@ -9,6 +9,7 @@ import org.apache.thrift.transport._
 class FooImpl extends Foo.Iface {
   override def bar(arg: String): Something = {
     println("[Server] arg: %s".format(arg))
+    throw new FooException("error")
     new Something("arg1", 10)
   }
 }

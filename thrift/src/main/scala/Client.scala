@@ -10,9 +10,16 @@ object Client {
     // サーバに接続
     transport.open()
     val foo = new Foo.Client(protocol)
-    // サービス呼び出し
-    println("[Client] call foo.bar()")
-    val res = foo.bar("Hello Thrift")
-    println("[Client] result: %s".format(res))
+
+    try {
+      println("[Client] call foo.bar()")
+      // サービス呼び出し
+      val res = foo.bar("Hello Thrift")
+      println("[Client] result: %s".format(res))
+    } catch {
+      case e:FooException => {
+        e.printStackTrace
+      }
+    }
   }
 }
