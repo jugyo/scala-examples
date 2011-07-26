@@ -11,8 +11,8 @@ object Client {
     transport.open()
     val foo = new Foo.Client(protocol)
     // サービス呼び出し
-    println("[Client] foo.sum(%s, %s)".format(1.1, 2.2))
-    val res = foo.sum(1.1, 2.2)
-    println("[Client] %s".format(res))
+    println("[Client] call foo.bar()")
+    val res = foo.bar("Hello Thrift")
+    println("[Client] result: %s".format(res))
   }
 }

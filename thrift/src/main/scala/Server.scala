@@ -7,9 +7,9 @@ import org.apache.thrift.transport._
 * Foo の実装
 */
 class FooImpl extends Foo.Iface {
-  override def sum(param1: Double, param2: Double): Double = {
-    println("[Server] sum(%s, %s)".format(param1, param2))
-    param1 + param2
+  override def bar(arg: String): Something = {
+    println("[Server] arg: %s".format(arg))
+    new Something("arg1", 10)
   }
 }
 

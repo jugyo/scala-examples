@@ -17,7 +17,7 @@ generate thfirt java code:
 mv the java code under src dir:
 
     $ mkdir src/main/java
-    $ mv gen-java/Foo.java src/main/java
+    $ mv gen-java/* src/main/java
 
 ## run
 

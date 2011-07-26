@@ -1,3 +1,9 @@
+struct Something
+{
+  1: string foo,
+  2: i32 bar
+}
+
 service Foo {
-  double sum(1: double param1, 2: double param2)
+  Something bar(1: string arg)
 }
