@@ -10,7 +10,7 @@ object Main extends App {
   val parser = new OptionParser("foo") {
     arg("<action>", "action", {v: String => config.action = v})
     intOpt("p", "port", "port number", {v: Int => config.port = v})
-    opt("h", "host", "nostname", {v: String => config.host = v})
+    opt("h", "host", "hostname", {v: String => config.host = v})
   }
   if (parser.parse(args)) {
      println(config.action)
